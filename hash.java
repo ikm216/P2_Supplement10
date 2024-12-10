@@ -20,8 +20,8 @@ public class hash {
         return Base64.getEncoder().encodeToString(bytes);
     }
 
-    // public static boolean matchHashString(String string, String hash_string, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
-    //     String match_hash = convertHashEnum(string, algorithm);
-    //     return match_hash.equals(hash_string);
-    // }
+    public static boolean matchHashString(String string, String hash_string, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
+        String match_hash = convertHashEnum(string, algorithm);
+        return match_hash.equals(hash_string);
+    }
 }
