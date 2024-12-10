@@ -23,6 +23,12 @@ public class Main {
 
             boolean isMatch = hash.matchHashString(string2, hashedString, HashAlgorithm.SHA256);
             System.out.println("Hash Match: " + isMatch);
+            
+            String input = "HelloWorld";
+            String salt = "MySecretSalt";
+        
+            String saltedHash = hash.saltHash(input, salt, HashAlgorithm.SHA256);
+            System.out.println("Salted SHA-256 Hash: " + saltedHash);
         } catch (NoSuchAlgorithmException e) {
             System.err.println("Error: " + e.getMessage());
         }

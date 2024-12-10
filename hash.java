@@ -33,4 +33,10 @@ public class hash {
         String match_hash = convertHashEnum(string, algorithm);
         return match_hash.equals(hash_string);
     }
+
+    public static String saltHash(String input, String salt, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
+        String combined = input + salt;
+    
+        return convertHashEnum(combined, algorithm);
+    }
 }
