@@ -20,6 +20,15 @@ public class hash {
         return Base64.getEncoder().encodeToString(bytes);
     }
 
+    /**
+     * Compares a given string against a provided hash using the specified algorithm.
+     *
+     * @param striing    The string to be hashed and compared.
+     * @param hash_string     The hash to compare against.
+     * @param algorithm The hashing algorithm to use (MD5, SHA-1, SHA-256).
+     * @return True if the hash of the input matches the provided hash; otherwise, false.
+     * @throws NoSuchAlgorithmException If the provided algorithm is invalid.
+     */
     public static boolean matchHashString(String string, String hash_string, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
         String match_hash = convertHashEnum(string, algorithm);
         return match_hash.equals(hash_string);
