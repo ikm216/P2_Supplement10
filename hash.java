@@ -34,6 +34,15 @@ public class hash {
         return match_hash.equals(hash_string);
     }
 
+    /**
+     * Generates a salted hash of a given string using the specified algorithm.
+     *
+     * @param input     The original string to be hashed.
+     * @param salt      The salt to be added to the string before hashing.
+     * @param algorithm The hashing algorithm to use (MD5, SHA-1, SHA-256).
+     * @return The salted hash in Base64 format.
+     * @throws NoSuchAlgorithmException If the provided hashing algorithm is not supported.
+     */
     public static String saltHash(String input, String salt, HashAlgorithm algorithm) throws NoSuchAlgorithmException {
         String combined = input + salt;
     
